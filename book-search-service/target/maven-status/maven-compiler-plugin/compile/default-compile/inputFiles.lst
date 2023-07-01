@@ -1,0 +1,12 @@
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/model/BookPayload.java
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/repository/mongo/BookMongoRepository.java
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/Application.java
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/api/BookController.java
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/mapper/BookMapper.java
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/service/BookService.java
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/model/BooksPage.java
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/repository/es/BookESRepository.java
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/config/ElasticSearchConfig.java
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/domain/mongo/BookEntity.java
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/domain/es/BookIndex.java
+/Users/oleksii/Home/HSA/HSA-HW-3/book-search-service/src/main/java/com/alexcorp/hsa/model/BookResponse.java

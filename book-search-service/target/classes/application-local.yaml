@@ -1,0 +1,10 @@
+logging:
+  level:
+    org:
+      elasticsearch: DEBUG
+      elasticsearch.transport: TRACE
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: TRACE

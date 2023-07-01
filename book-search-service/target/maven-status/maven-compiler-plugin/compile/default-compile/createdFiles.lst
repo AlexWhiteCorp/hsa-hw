@@ -1,0 +1,13 @@
+com/alexcorp/hsa/domain/mongo/BookEntity.class
+com/alexcorp/hsa/model/BookResponse.class
+com/alexcorp/hsa/repository/es/BookESRepository.class
+com/alexcorp/hsa/mapper/BookMapper.class
+com/alexcorp/hsa/api/BookController.class
+com/alexcorp/hsa/model/BooksPage.class
+com/alexcorp/hsa/Application.class
+com/alexcorp/hsa/model/BookPayload.class
+com/alexcorp/hsa/domain/es/BookIndex.class
+com/alexcorp/hsa/service/BookService.class
+com/alexcorp/hsa/config/ElasticSearchConfig.class
+com/alexcorp/hsa/repository/mongo/BookMongoRepository.class
+com/alexcorp/hsa/mapper/BookMapperImpl.class
