@@ -97,8 +97,6 @@ services:
     environment:
       - spring.data.elasticsearch.host=elasticsearch
       - spring.data.mongodb.host=mongo
-    env_file:
-      - backend-service-common.env
     depends_on:
       - elasticsearch
       - mongo
