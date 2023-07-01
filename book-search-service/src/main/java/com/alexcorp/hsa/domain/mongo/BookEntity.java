@@ -12,7 +12,9 @@ public class BookEntity {
 
     @Id
     private UUID id;
+
     private String title;
+
     private String author;
 
 }

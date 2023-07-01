@@ -94,9 +94,8 @@ services:
     mem_limit: 512m
     mem_reservation: 128M
     cpus: 4
-    environment:
-      - spring.data.elasticsearch.host=elasticsearch
-      - spring.data.mongodb.host=mongo
+    env_file:
+      - ./book-search-service/config.env
     depends_on:
       - elasticsearch
       - mongo

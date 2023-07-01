@@ -1,3 +1,15 @@
+spring:
+  data:
+    elasticsearch:
+      host: localhost
+    mongodb:
+      username: root
+      password: example
+      host: localhost
+      port: 27017
+      database: books
+      authentication-database: admin
+
 logging:
   level:
     org:

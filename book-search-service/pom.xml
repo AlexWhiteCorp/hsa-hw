@@ -20,7 +20,7 @@
 
         <lombok.version>1.18.26</lombok.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
-
+        <lombok-mapstruct.version>0.2.0</lombok-mapstruct.version>
         <maven.compiler.version>3.5.1</maven.compiler.version>
     </properties>
 
@@ -70,7 +70,7 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok-mapstruct-binding</artifactId>
-                            <version>0.2.0</version>
+                            <version>${lombok-mapstruct.version}</version>
                         </path>
                         <path>
                             <groupId>org.mapstruct</groupId>
