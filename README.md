@@ -15,6 +15,12 @@ docker-compose contains TIG stack and sample backend infrastructure:
     * telegraf
 
 ## Usage
+Build backend service
+```
+cd book-search-service
+mvn clean package
+```
+
 Start up local stack
 ```
 docker-compose up
