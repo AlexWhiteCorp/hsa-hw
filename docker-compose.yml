@@ -91,7 +91,7 @@ services:
       context: ./book-search-service
     hostname: local
     container_name: book-search-service
-    mem_limit: 512m
+    mem_limit: 670m
     mem_reservation: 128M
     cpus: 4
     env_file:
@@ -142,6 +142,7 @@ services:
     volumes:
       - ./telegraf/etc/telegraf.conf:/etc/telegraf/telegraf.conf:ro
       - /var/run/docker.sock:/var/run/docker.sock
+    entrypoint: /bin/bash -c "chmod 666 /var/run/docker.sock && /entrypoint.sh telegraf"
     depends_on:
       - influxdb
     links:
