@@ -16,9 +16,147 @@
   "editable": true,
   "gnetId": 1530,
   "graphTooltip": 0,
-  "iteration": 1688456972070,
+  "iteration": 1688474401576,
   "links": [],
   "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "cacheTimeout": null,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "interval": null,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "maxDataPoints": 100,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.0.2",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Open Connections",
+          "dsType": "influxdb",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "mongodb",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "open_connections"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Open Connections",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:319",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:320",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
     {
       "aliasColors": {},
       "bars": false,
@@ -28,9 +166,9 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 7,
-        "w": 18,
-        "x": 0,
+        "h": 8,
+        "w": 12,
+        "x": 12,
         "y": 0
       },
       "hiddenSeries": false,
@@ -366,212 +504,6 @@
       }
     },
     {
-      "cacheTimeout": null,
-      "datasource": "InfluxDB",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 6,
-        "w": 3,
-        "x": 18,
-        "y": 0
-      },
-      "id": 4,
-      "interval": null,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "none",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "text": {},
-        "textMode": "auto"
-      },
-      "pluginVersion": "8.0.2",
-      "targets": [
-        {
-          "alias": "Open Connections",
-          "dsType": "influxdb",
-          "groupBy": [
-            {
-              "params": [
-                "$interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "mongodb",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "open_connections"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$host$/"
-            }
-          ]
-        }
-      ],
-      "title": "Open Connections",
-      "type": "stat"
-    },
-    {
-      "cacheTimeout": null,
-      "datasource": "InfluxDB",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "decbytes"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 6,
-        "w": 3,
-        "x": 21,
-        "y": 0
-      },
-      "id": 5,
-      "interval": null,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "none",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "text": {},
-        "textMode": "auto"
-      },
-      "pluginVersion": "8.0.2",
-      "targets": [
-        {
-          "dsType": "influxdb",
-          "groupBy": [
-            {
-              "params": [
-                "$interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "docker_container_mem",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "limit"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$host$/"
-            },
-            {
-              "condition": "AND",
-              "key": "container_name",
-              "operator": "=",
-              "value": "mongo"
-            }
-          ]
-        }
-      ],
-      "title": "Virtual Memory",
-      "type": "stat"
-    },
-    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -584,7 +516,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 7
+        "y": 8
       },
       "hiddenSeries": false,
       "id": 1,
@@ -842,7 +774,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 7
+        "y": 8
       },
       "hiddenSeries": false,
       "id": 8,
@@ -1014,7 +946,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 14
+        "y": 15
       },
       "hiddenSeries": false,
       "id": 3,
@@ -1186,7 +1118,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 14
+        "y": 15
       },
       "hiddenSeries": false,
       "id": 7,
@@ -1352,13 +1284,19 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 21
+        "y": 22
       },
       "hiddenSeries": false,
       "id": 6,
@@ -1407,7 +1345,8 @@
               "type": "fill"
             }
           ],
-          "measurement": "mongodb",
+          "measurement": "docker_container_mem",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
           "resultFormat": "time_series",
@@ -1415,7 +1354,7 @@
             [
               {
                 "params": [
-                  "vsize_megabytes"
+                  "limit"
                 ],
                 "type": "field"
               },
@@ -1430,6 +1369,12 @@
               "key": "host",
               "operator": "=~",
               "value": "/^$host$/"
+            },
+            {
+              "condition": "AND",
+              "key": "container_name",
+              "operator": "=",
+              "value": "mongo"
             }
           ]
         },
@@ -1450,7 +1395,8 @@
               "type": "fill"
             }
           ],
-          "measurement": "mongodb",
+          "measurement": "docker_container_mem",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
           "resultFormat": "time_series",
@@ -1458,7 +1404,7 @@
             [
               {
                 "params": [
-                  "resident_megabytes"
+                  "usage"
                 ],
                 "type": "field"
               },
@@ -1473,92 +1419,12 @@
               "key": "host",
               "operator": "=~",
               "value": "/^$host$/"
-            }
-          ]
-        },
-        {
-          "alias": "Mapped memory",
-          "dsType": "influxdb",
-          "groupBy": [
-            {
-              "params": [
-                "$interval"
-              ],
-              "type": "time"
             },
             {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "mongodb",
-          "policy": "default",
-          "refId": "C",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "mapped_megabytes"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$host$/"
-            }
-          ]
-        },
-        {
-          "alias": "Non-Mapped memory",
-          "dsType": "influxdb",
-          "groupBy": [
-            {
-              "params": [
-                "$interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "mongodb",
-          "policy": "default",
-          "refId": "D",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "non-mapped_megabytes"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$host$/"
+              "condition": "AND",
+              "key": "container_name",
+              "operator": "=",
+              "value": "mongo"
             }
           ]
         }
@@ -1583,7 +1449,8 @@
       },
       "yaxes": [
         {
-          "format": "decmbytes",
+          "$$hashKey": "object:76",
+          "format": "decbytes",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1591,6 +1458,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:77",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1747,7 +1615,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "MongoDB Monitoring Dashboard",
+  "title": "MongoDB Dashboard",
   "uid": "5USIPb94z",
-  "version": 2
+  "version": 4
 }
