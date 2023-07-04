@@ -15,18 +15,16 @@ docker-compose contains TIG(Telegraf + InfluxDB + Grafana) stack and sample back
     * telegraf
 
 ### Repo contains prepared Dashboard for Grafana:
-* CPU Usage statistic per service
-* Memory Usage statistic per service
-* Total CPU units available for docker
-* Total memory available for docker
-* Total services running
-* CPU Global Usage(all service)
-* Memory Global Usage(all service + total usage + machine limit)
-* Network Global Usage IN/OUT(all service)
-* Disk Global Usage READ/WRITE(all service)
+* Common Resources Usage Dashboard
+  ![image info](./docs/dashboard-1.png)
+  ![image info](./docs/dashboard-2.png)
+* Nginx Dashboard
+  ![image info](./docs/dashboard-3.png)
+* ElasticSearch Dashboard
+  ![image info](./docs/dashboard-4.png)
+* MongoDB Dashboard
+  ![image info](./docs/dashboard-5.png)
 
-![image info](./docs/dashboard-1.png)
-![image info](./docs/dashboard-2.png)
 
 ### Backend logic
 * nginx --(proxy)--> book-search-service

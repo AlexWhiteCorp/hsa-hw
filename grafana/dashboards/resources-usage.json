@@ -16,7 +16,7 @@
   "editable": true,
   "gnetId": 1150,
   "graphTooltip": 0,
-  "iteration": 1688224043988,
+  "iteration": 1688476464859,
   "links": [],
   "panels": [
     {
@@ -628,6 +628,12 @@
       "datasource": "InfluxDB",
       "editable": true,
       "error": false,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -667,7 +673,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_container_name",
+          "alias": "load1",
           "dsType": "influxdb",
           "expr": "",
           "groupBy": [
@@ -679,9 +685,50 @@
             },
             {
               "params": [
-                "container_name"
+                "null"
               ],
-              "type": "tag"
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "intervalFactor": 2,
+          "measurement": "system",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "load1"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            }
+          ]
+        },
+        {
+          "alias": "load5",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
             },
             {
               "params": [
@@ -690,16 +737,65 @@
               "type": "fill"
             }
           ],
+          "hide": false,
           "intervalFactor": 2,
-          "measurement": "docker_container_cpu",
+          "measurement": "system",
+          "orderByTime": "ASC",
           "policy": "default",
-          "refId": "A",
+          "refId": "C",
           "resultFormat": "time_series",
           "select": [
             [
               {
                 "params": [
-                  "usage_percent"
+                  "load5"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            }
+          ]
+        },
+        {
+          "alias": "load15",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "intervalFactor": 2,
+          "measurement": "system",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "load15"
                 ],
                 "type": "field"
               },
@@ -740,7 +836,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:380",
-          "format": "percent",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1567,7 +1663,7 @@
       }
     }
   ],
-  "refresh": "30s",
+  "refresh": "5s",
   "schemaVersion": 30,
   "style": "dark",
   "tags": [],
@@ -1659,5 +1755,5 @@
   "timezone": "browser",
   "title": "Resources Usage Dashboard",
   "uid": "GuG0x49Vk",
-  "version": 10
+  "version": 14
 }
