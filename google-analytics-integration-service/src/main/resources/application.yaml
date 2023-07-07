@@ -1,0 +1,13 @@
+clients:
+  yahoo-finance:
+    url: https://query1.finance.yahoo.com
+    symbols: META,AAPL,AMZN,NFLX,GOOGL
+  google-analytics:
+    url: https://www.google-analytics.com
+    api-secret: ${GOOGLE_ANALYTICS_API_SECRET}
+    stocks:
+      client-id: ${GOOGLE_ANALYTICS_STOCKS_EVENT_CLIENT_ID}
+      measurement-id: ${GOOGLE_ANALYTICS_STOCKS_EVENT_MEASUREMENT_ID}
+      event-name: stock_prices
+      # 5 minutes
+      delay: 300_000
